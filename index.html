@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕌 تلاوات القرآن الكريم | شيوخ التجويد | Maded By Moaz Yasser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=El+Messiri:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Decorative Background Elements -->
+    <div class="quran-icon quran-icon-1">
+        <i class="fas fa-quran"></i>
+    </div>
+    <div class="quran-icon quran-icon-2">
+        <i class="fas fa-quran"></i>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>تلاوات القرآن الكريم</h1>
+                    <p>استمع وتدبر كلام الله تعالى</p>
+                </div>
+            </div>
+            <div class="creator-badge">
+                <i class="fas fa-code"></i>
+                <span class="creator-name">Maded By Moaz Yasser</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن شيخ أو سورة...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="filter-container">
+                <button class="filter-btn" id="filterAll">
+                    <i class="fas fa-globe"></i> جميع الشيوخ
+                </button>
+                <button class="filter-btn egypt-flag" id="filterEgypt">
+                    <i class="fas fa-flag"></i> الشيوخ المصريين
+                </button>
+                <button class="filter-btn" id="filterSaudi">
+                    <i class="fas fa-kaaba"></i> الشيوخ السعوديين
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-title">
+            <h2>شيوخ القرآن الكريم</h2>
+            <p>استمع إلى تلاوات كاملة للمصحف بأصوع الشيوخ وأجمل الأصوات</p>
+        </div>
+        
+        <!-- Stats -->
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-number" id="totalSheikhs">24</span>
+                <span class="stat-label">شيخ</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="egyptianSheikhs">12</span>
+                <span class="stat-label">شيخ مصري</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="saudiSheikhs">12</span>
+                <span class="stat-label">شيخ سعودي</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">114</span>
+                <span class="stat-label">سورة للتنزيل</span>
+            </div>
+        </div>
+        
+        <!-- Verse Decoration -->
+        <div class="verse-decoration">
+            ﴿ وَقُرْآنًا فَرَقْنَاهُ لِتَقْرَأَهُ عَلَى النَّاسِ عَلَىٰ مُكْثٍ وَنَزَّلْنَاهُ تَنزِيلًا ﴾
+        </div>
+        
+        <!-- Sheikhs Grid -->
+        <div class="sheikhs-grid" id="sheikhsContainer">
+            <!-- Sheikhs will be dynamically loaded here -->
+        </div>
+    </main>
+    
+    <!-- Audio Player -->
+    <div class="audio-player-container" id="audioPlayer">
+        <div class="container audio-player">
+            <div class="player-info">
+                <img src="" alt="Sheikh" class="player-sheikh-img" id="playerSheikhImg">
+                <div class="player-text">
+                    <h4 id="playerTitle">استماع إلى التلاوة</h4>
+                    <p id="playerSubtitle">اختر تلاوة للبدء</p>
+                </div>
+            </div>
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn" id="prevBtn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="control-btn play-btn" id="playBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="control-btn" id="nextBtn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+                <div class="progress-container">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="player-actions">
+                <button class="control-btn" id="downloadCurrentBtn" title="تنزيل السورة الحالية">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="close-player" id="closePlayer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Download Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">تنزيل سور القرآن الكريم</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="suras-list" id="surasList">
+                    <!-- Suras will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>🕌 تلاوات القرآن الكريم</h3>
+                    <p>موقع للاستماع وتنزيل تلاوات القرآن الكريم بأصوات أشهر الشيوخ</p>
+                </div>
+                <div class="footer-creator">
+                    <i class="fas fa-heart" style="color: #d4af37;"></i>
+                    تم التطوير والبرمجة بواسطة <span>Moaz Yasser</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2023 | هذا الموقع مخصص للاستماع إلى القرآن الكريم فقط</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
