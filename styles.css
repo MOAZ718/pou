@@ -1,0 +1,929 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'El Messiri', 'Scheherazade New', 'Amiri', sans-serif;
+}
+
+:root {
+    --primary-color: #1a472a;
+    --secondary-color: #2d5a27;
+    --accent-color: #d4af37;
+    --light-color: #f8f5e6;
+    --dark-color: #0c2916;
+    --text-color: #2c3e2f;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    --border-radius: 12px;
+    --border-radius-small: 8px;
+    --quran-gradient: linear-gradient(135deg, #1a472a 0%, #2d5a27 50%, #3a6b1f 100%);
+    --light-gradient: linear-gradient(to bottom, #f8f5e6 0%, #f1ecdb 100%);
+    --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f7ef8a 100%);
+    --egypt-gradient: linear-gradient(135deg, #c19a53 0%, #d4af37 50%, #e6c878 100%);
+}
+
+body {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><path fill="%23d4af37" opacity="0.03" d="M60,10 C70,0 110,0 120,10 C110,20 70,20 60,10 Z" /><path fill="%232d5a27" opacity="0.03" d="M0,60 C10,70 10,110 0,120 C-10,110 -10,70 0,60 Z" /></svg>');
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: var(--quran-gradient);
+    color: white;
+    padding: 22px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-family: 'Amiri', serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #f8f5e6, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 3px;
+    letter-spacing: 1.5px;
+    font-family: 'Scheherazade New', serif;
+}
+
+.creator-badge {
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.creator-badge:hover {
+    background: rgba(212, 175, 55, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.creator-badge i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.creator-name {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(26, 71, 42, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    flex-grow: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 14px 20px 14px 50px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    padding: 12px 22px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+.egypt-flag {
+    background: var(--egypt-gradient) !important;
+    color: white !important;
+}
+
+/* Main Content */
+.main-title {
+    text-align: center;
+    margin: 40px 0 30px;
+    position: relative;
+}
+
+.main-title h2 {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.main-title h2:before, .main-title h2:after {
+    content: "✻";
+    color: var(--accent-color);
+    margin: 0 15px;
+    font-size: 2rem;
+}
+
+.main-title p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Country Tabs */
+.country-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.country-tab {
+    padding: 12px 30px;
+    background: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.country-tab.active {
+    background: var(--quran-gradient);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.country-tab.egypt {
+    background: var(--egypt-gradient);
+    color: white;
+}
+
+.country-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Sheikh Grid */
+.sheikhs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.sheikh-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    border-top: 5px solid var(--accent-color);
+}
+
+.sheikh-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.sheikh-card.egyptian {
+    border-top-color: #c19a53;
+}
+
+.sheikh-img {
+    height: 220px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.sheikh-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(26, 71, 42, 0.2), rgba(26, 71, 42, 0.7));
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.sheikh-card.egyptian .sheikh-overlay {
+    background: linear-gradient(to bottom, rgba(193, 154, 83, 0.2), rgba(193, 154, 83, 0.7));
+}
+
+.sheikh-name {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Amiri', serif;
+}
+
+.sheikh-info {
+    padding: 22px;
+}
+
+.sheikh-country {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--primary-color);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.sheikh-card.egyptian .sheikh-country {
+    background-color: rgba(193, 154, 83, 0.2);
+    color: #8b6914;
+}
+
+.sheikh-description {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.recitations-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sheikh-card.egyptian .recitations-count {
+    color: #8b6914;
+}
+
+.recitations-count i {
+    color: var(--accent-color);
+}
+
+.sheikh-card.egyptian .recitations-count i {
+    color: #c19a53;
+}
+
+.sheikh-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 12px 5px;
+    border: none;
+    border-radius: var(--border-radius-small);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.listen-btn {
+    background: var(--quran-gradient);
+    color: white;
+}
+
+.sheikh-card.egyptian .listen-btn {
+    background: var(--egypt-gradient);
+}
+
+.download-btn {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--dark-color);
+}
+
+.sheikh-card.egyptian .download-btn {
+    background-color: rgba(193, 154, 83, 0.15);
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.listen-btn:hover {
+    background: linear-gradient(135deg, #2d5a27 0%, #3a6b1f 50%, #4a7c17 100%);
+}
+
+.sheikh-card.egyptian .listen-btn:hover {
+    background: linear-gradient(135deg, #a88746 0%, #c19a53 50%, #d8b56c 100%);
+}
+
+.download-btn:hover {
+    background-color: rgba(212, 175, 55, 0.3);
+}
+
+.sheikh-card.egyptian .download-btn:hover {
+    background-color: rgba(193, 154, 83, 0.3);
+}
+
+/* Audio Player */
+.audio-player-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 18px 0;
+    border-top: 3px solid var(--accent-color);
+    display: none;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 250px;
+}
+
+.player-sheikh-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.player-text h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.player-text p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.player-controls {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--secondary-color);
+}
+
+.play-btn {
+    background: var(--quran-gradient);
+    color: white;
+    width: 55px;
+    height: 55px;
+    font-size: 1.7rem;
+}
+
+.play-btn:hover {
+    background: linear-gradient(135deg, #2d5a27 0%, #3a6b1f 50%, #4a7c17 100%);
+}
+
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    background: var(--quran-gradient);
+    width: 0%;
+    transition: width 0.1s;
+}
+
+.player-actions {
+    display: flex;
+    gap: 15px;
+    min-width: 180px;
+    justify-content: flex-end;
+}
+
+.close-player {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-player:hover {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--primary-color);
+}
+
+/* Download Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    background: white;
+    width: 90%;
+    max-width: 700px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-heavy);
+    overflow: hidden;
+    animation: modalAppear 0.4s ease-out;
+}
+
+@keyframes modalAppear {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    background: var(--quran-gradient);
+    color: white;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 1.6rem;
+    font-family: 'Amiri', serif;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-content {
+    padding: 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.suras-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.sura-item {
+    background: #f9f9f9;
+    border-radius: var(--border-radius-small);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.sura-item:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.sura-number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: var(--quran-gradient);
+    color: white;
+    border-radius: 50%;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.sura-name {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-family: 'Amiri', serif;
+    font-size: 1.1rem;
+}
+
+.sura-details {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.download-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 8px;
+    background: #f0f7f0;
+    border-radius: var(--border-radius-small);
+}
+
+/* Footer */
+footer {
+    background: var(--quran-gradient);
+    color: white;
+    padding: 40px 0 25px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+    font-family: 'Amiri', serif;
+}
+
+.footer-logo p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.footer-creator {
+    text-align: center;
+    font-size: 1.1rem;
+    background: rgba(212, 175, 55, 0.15);
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.footer-creator span {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    letter-spacing: 1px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    min-width: 180px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Decorative Elements */
+.quran-icon {
+    position: fixed;
+    font-size: 120px;
+    color: rgba(212, 175, 55, 0.05);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.quran-icon-1 {
+    top: 10%;
+    left: 5%;
+}
+
+.quran-icon-2 {
+    bottom: 15%;
+    right: 5%;
+}
+
+.verse-decoration {
+    text-align: center;
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin: 40px 0;
+    padding: 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    background: rgba(248, 245, 230, 0.5);
+    border-radius: var(--border-radius);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .audio-player {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .player-info, .player-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sheikhs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .main-title h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .country-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .stat-box {
+        min-width: 140px;
+    }
+    
+    .filter-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .creator-badge {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+    
+    .main-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .sheikhs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sheikh-name {
+        font-size: 1.5rem;
+    }
+    
+    .player-info {
+        min-width: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-container {
+        gap: 15px;
+    }
+    
+    .stat-box {
+        min-width: 120px;
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
