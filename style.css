@@ -1042,3 +1042,145 @@ footer {
 .sheikh-img.loading::after {
     display: block;
 }
+/* ============================================
+   إصلاحات الصوت والإشعارات
+   ============================================ */
+
+/* زر التشغيل عند الخطأ */
+.play-btn.error {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 50%, #bd2130 100%) !important;
+    animation: pulseError 1s infinite;
+}
+
+@keyframes pulseError {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* زر اختبار الصوت */
+.audio-test {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: var(--quran-gradient);
+    color: white;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.audio-test:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* رسائل حالة الصوت */
+.audio-status {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-heavy);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.audio-status.success {
+    border-left: 5px solid #28a745;
+}
+
+.audio-status.error {
+    border-left: 5px solid #dc3545;
+}
+
+.audio-status.info {
+    border-left: 5px solid var(--accent-color);
+}
+
+/* تحسين شريط التقدم */
+.progress-bar {
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar:hover .progress {
+    background: linear-gradient(135deg, #2d5a27 0%, #4a7c17 100%);
+}
+
+/* تحسين أزرار التحكم */
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.control-btn:disabled:hover {
+    background: none;
+    transform: none;
+}
+
+/* رسالة عند عدم وجود صوت */
+.no-audio-message {
+    text-align: center;
+    padding: 20px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: var(--border-radius);
+    color: #856404;
+    margin: 20px 0;
+}
+
+.no-audio-message i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 768px) {
+    .audio-test {
+        bottom: 80px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .audio-status {
+        min-width: 250px;
+        top: 10px;
+        padding: 12px 15px;
+    }
+}
+
+/* تحميل الصوت */
+.audio-loading {
+    position: relative;
+}
+
+.audio-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(212, 175, 55, 0.2);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
