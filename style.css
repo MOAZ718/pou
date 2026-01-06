@@ -973,3 +973,116 @@ footer {
         justify-content: center;
     }
     
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sheikhs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .main-title h2 {
+        font-size: 2rem;
+    }
+    
+    .sheikh-name {
+        font-size: 1.5rem;
+    }
+    
+    .filter-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat-box {
+        min-width: 140px;
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .modal-content {
+        padding: 15px;
+    }
+    
+    .suras-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+    
+    .audio-test {
+        bottom: 80px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .notification {
+        min-width: 250px;
+        top: 10px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .creator-badge {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+    
+    .main-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .sheikhs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sheikh-img {
+        height: 200px;
+    }
+    
+    .player-info {
+        min-width: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-container {
+        gap: 15px;
+    }
+    
+    .stat-box {
+        min-width: 120px;
+        padding: 12px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .footer-logo h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-creator {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
