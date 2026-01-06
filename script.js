@@ -1,4 +1,6 @@
+// ============================================
 // Sheikhs Data - 24 sheikhs (12 Egyptian + 12 Saudi)
+// ============================================
 const sheikhs = [
     // Egyptian Sheikhs (12)
     {
@@ -6,7 +8,7 @@ const sheikhs = [
         name: "الشيخ عبد الباسط عبد الصمد",
         country: "مصر",
         description: "أحد أشهر قراء القرآن الكريم في العالم الإسلامي، يتميز بصوته العذب وأدائه الفريد.",
-        image: "https://images.unsplash.com/photo-1541250628459-d8f2f8b9d585?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/4JqXv8Q/abdulbasit.jpg",
         style: "المصري",
         recitations: 120,
         type: "egyptian"
@@ -16,7 +18,7 @@ const sheikhs = [
         name: "الشيخ محمد صديق المنشاوي",
         country: "مصر",
         description: "يعتبر من أبرز القراء في العالم الإسلامي، صوته يتميز بالخشوع والقوة.",
-        image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/5Bh6mYt/minshawi.jpg",
         style: "المصري",
         recitations: 85,
         type: "egyptian"
@@ -26,7 +28,7 @@ const sheikhs = [
         name: "الشيخ محمود خليل الحصري",
         country: "مصر",
         description: "أول من سجل القرآن الكريم برواية حفص عن عاصم، صوته مميز بالدقة والتجويد.",
-        image: "https://images.unsplash.com/photo-1541250584645-cb7b0e0c7f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/5B9p4sW/husary.jpg",
         style: "المصري",
         recitations: 150,
         type: "egyptian"
@@ -36,7 +38,7 @@ const sheikhs = [
         name: "الشيخ مصطفى إسماعيل",
         country: "مصر",
         description: "شيخ القراء، صوته قوي وجميل ويتميز بأدائه المميز والتلوين الصوتي الرائع.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/SNLgVQc/mostafa-ismail.jpg",
         style: "المصري",
         recitations: 95,
         type: "egyptian"
@@ -46,7 +48,7 @@ const sheikhs = [
         name: "الشيخ محمد رفعت",
         country: "مصر",
         description: "القارئ الشيخ، أول من افتتح الإذاعة المصرية بقراءة القرآن، صوته عذب وجميل.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/4PqNQDj/mohamed-refaat.jpg",
         style: "المصري",
         recitations: 110,
         type: "egyptian"
@@ -56,7 +58,7 @@ const sheikhs = [
         name: "الشيخ علي الحذيفي",
         country: "مصر",
         description: "صوته مميز بالهدوء والخشوع، من أشهر القراء في العالم الإسلامي.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/5vjQmDq/ali-huthaifi.jpg",
         style: "المصري",
         recitations: 80,
         type: "egyptian"
@@ -66,7 +68,7 @@ const sheikhs = [
         name: "الشيخ أحمد الرزيقي",
         country: "مصر",
         description: "قارئ مصري شهير، صوته عذب ويتميز بأدائه المميز والتجويد الدقيق.",
-        image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/RQdDcPj/ahmed-el-razaq.jpg",
         style: "المصري",
         recitations: 130,
         type: "egyptian"
@@ -76,7 +78,7 @@ const sheikhs = [
         name: "الشيخ كامل يوسف البهتيمي",
         country: "مصر",
         description: "قارئ مصري شهير، صوته مميز بالخشوع والقوة، من تلاميذ الشيخ محمد رفعت.",
-        image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/0mzQMz6/kamel-youssef.jpg",
         style: "المصري",
         recitations: 75,
         type: "egyptian"
@@ -86,7 +88,7 @@ const sheikhs = [
         name: "الشيخ عبد العزيز حصان",
         country: "مصر",
         description: "قارئ مصري شهير، صوته عذب ويتميز بأدائه المميز وقراءته المرتلة.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/vZ3K62S/aziz-hassan.jpg",
         style: "المصري",
         recitations: 90,
         type: "egyptian"
@@ -96,7 +98,7 @@ const sheikhs = [
         name: "الشيخ محمود علي البنا",
         country: "مصر",
         description: "قارئ مصري شهير، صوته مميز بالخشوع والهدوء، من أشهر قراء القرن العشرين.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/0GkG5fL/mahmoud-albana.jpg",
         style: "المصري",
         recitations: 100,
         type: "egyptian"
@@ -106,7 +108,7 @@ const sheikhs = [
         name: "الشيخ محمد جبريل",
         country: "مصر",
         description: "إمام مسجد الإمام الشافعي، صوته قوي وجميل ويتميز بأدائه المميز.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/6XS6km2/mohamed-gibreel.jpg",
         style: "المصري",
         recitations: 85,
         type: "egyptian"
@@ -116,7 +118,7 @@ const sheikhs = [
         name: "الشيخ سعيد عبد الصمد الزناتي",
         country: "مصر",
         description: "قارئ مصري شهير، صوته عذب ويتميز بأدائه المميز وقراءته المرتلة.",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/P4tSTFW/said-zanaty.jpg",
         style: "المصري",
         recitations: 70,
         type: "egyptian"
@@ -128,7 +130,7 @@ const sheikhs = [
         name: "الشيخ سعود الشريم",
         country: "السعودية",
         description: "إمام الحرم المكي، يتميز بأدائه القوي وصوته الجهوري العذب.",
-        image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/5Tf4zDX/saud-al-shuraim.jpg",
         style: "الحجازي",
         recitations: 95,
         type: "saudi"
@@ -138,7 +140,7 @@ const sheikhs = [
         name: "الشيخ ماهر المعيقلي",
         country: "السعودية",
         description: "إمام الحرم المكي، صوته مميز بالخشوع والترتيل الجميل.",
-        image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/Kx23kxb/maher-al-muaiqly.jpg",
         style: "الحجازي",
         recitations: 110,
         type: "saudi"
@@ -148,7 +150,7 @@ const sheikhs = [
         name: "الشيخ أحمد العجمي",
         country: "السعودية",
         description: "صوته قوي وجميل، من أشهر قراء القرآن الكريم في العصر الحديث.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/pjv9X0g/ahmed-al-ajmi.jpg",
         style: "الحجازي",
         recitations: 130,
         type: "saudi"
@@ -158,7 +160,7 @@ const sheikhs = [
         name: "الشيخ ياسر الدوسري",
         country: "السعودية",
         description: "إمام الحرم المكي، صوته عذب وجميل ويتميز بأدائه المميز.",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/9pL55gK/yasser-al-dosari.jpg",
         style: "الحجازي",
         recitations: 75,
         type: "saudi"
@@ -168,7 +170,7 @@ const sheikhs = [
         name: "الشيخ ناصر القطامي",
         country: "السعودية",
         description: "قارئ سعودي شهير، صوته عذب ويتميز بتلاوته الهادئة.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/MV0tN1x/nasser-al-qatami.jpg",
         style: "الحجازي",
         recitations: 90,
         type: "saudi"
@@ -178,7 +180,7 @@ const sheikhs = [
         name: "الشيخ علي جابر",
         country: "السعودية",
         description: "إمام الحرم المكي السابق، صوته مميز بالخشوع والهدوء.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/fxNz9Mw/ali-jaber.jpg",
         style: "الحجازي",
         recitations: 80,
         type: "saudi"
@@ -188,7 +190,7 @@ const sheikhs = [
         name: "الشيخ أبو بكر الشاطري",
         country: "السعودية",
         description: "قارئ يمني مقيم بالسعودية، صوته عذب ويتميز بأدائه المميز.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/1qYNf7R/abu-bakr-al-shatri.jpg",
         style: "الحجازي",
         recitations: 100,
         type: "saudi"
@@ -198,7 +200,7 @@ const sheikhs = [
         name: "الشيخ محمد أيوب",
         country: "السعودية",
         description: "إمام الحرم المدني، صوته قوي وجميل ويتميز بأدائه المميز.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/Cb4d8Yz/mohamed-ayyub.jpg",
         style: "الحجازي",
         recitations: 110,
         type: "saudi"
@@ -208,7 +210,7 @@ const sheikhs = [
         name: "الشيخ عبد الله عواد الجهني",
         country: "السعودية",
         description: "إمام الحرم النبوي، صوته عذب ويتميز بأدائه المميز.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/1X8L4sR/abdullah-al-juhani.jpg",
         style: "الحجازي",
         recitations: 85,
         type: "saudi"
@@ -218,7 +220,7 @@ const sheikhs = [
         name: "الشيخ فيصل غزاوي",
         country: "السعودية",
         description: "قارئ سعودي شهير، صوته مميز بالخشوع والترتيل الجميل.",
-        image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/NT7Z2y0/faisal-ghazzawi.jpg",
         style: "الحجازي",
         recitations: 95,
         type: "saudi"
@@ -228,7 +230,7 @@ const sheikhs = [
         name: "الشيخ بندر بليله",
         country: "السعودية",
         description: "إمام الحرم المكي، صوته عذب ويتميز بأدائه المميز.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/6WRSvsv/bandar-bleleh.jpg",
         style: "الحجازي",
         recitations: 70,
         type: "saudi"
@@ -238,14 +240,16 @@ const sheikhs = [
         name: "الشيخ عبد الرحمن السديس",
         country: "السعودية",
         description: "إمام الحرم المكي، صوته مميز بالخشوع والقوة.",
-        image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "https://i.ibb.co/cyNvGyt/abdulrahman-al-sudais.jpg",
         style: "الحجازي",
         recitations: 120,
         type: "saudi"
     }
 ];
 
+// ============================================
 // Suras Data
+// ============================================
 const suras = [
     { number: 1, name: "الفاتحة", verses: 7, place: "مكية" },
     { number: 2, name: "البقرة", verses: 286, place: "مدنية" },
@@ -274,7 +278,9 @@ const suras = [
     { number: 25, name: "الفرقان", verses: 77, place: "مكية" }
 ];
 
+// ============================================
 // DOM Elements
+// ============================================
 const sheikhsContainer = document.getElementById('sheikhsContainer');
 const audioPlayer = document.getElementById('audioPlayer');
 const playBtn = document.getElementById('playBtn');
@@ -297,7 +303,18 @@ const totalSheikhsEl = document.getElementById('totalSheikhs');
 const egyptianSheikhsEl = document.getElementById('egyptianSheikhs');
 const saudiSheikhsEl = document.getElementById('saudiSheikhs');
 
-// Stats calculation
+// ============================================
+// App Variables
+// ============================================
+let audio = new Audio();
+let isPlaying = false;
+let currentSheikh = null;
+let currentSuraIndex = 0;
+let currentFilter = 'all';
+
+// ============================================
+// Initialize Statistics
+// ============================================
 const egyptianSheikhsCount = sheikhs.filter(s => s.type === 'egyptian').length;
 const saudiSheikhsCount = sheikhs.filter(s => s.type === 'saudi').length;
 
@@ -305,23 +322,51 @@ totalSheikhsEl.textContent = sheikhs.length;
 egyptianSheikhsEl.textContent = egyptianSheikhsCount;
 saudiSheikhsEl.textContent = saudiSheikhsCount;
 
-// Audio variables
-let audio = new Audio();
-let isPlaying = false;
-let currentSheikh = null;
-let currentSuraIndex = 0;
-let currentFilter = 'all';
+// ============================================
+// Main Functions
+// ============================================
 
-// Initialize the page
+// Initialize the application
 function init() {
     renderSheikhs();
     setupEventListeners();
     updateFilterButtons();
+    preloadImages();
+}
+
+// Preload images for better performance
+function preloadImages() {
+    console.log('🚀 جاري تحميل صور الشيوخ...');
+    
+    sheikhs.forEach((sheikh, index) => {
+        const img = new Image();
+        img.onload = () => {
+            console.log(`✅ صورة ${sheikh.name} محملة بنجاح`);
+        };
+        img.onerror = () => {
+            console.log(`⚠️ خطأ في تحميل صورة ${sheikh.name}`);
+            // Use fallback image
+            sheikh.image = `https://via.placeholder.com/500x300/1a472a/ffffff?text=${encodeURIComponent(sheikh.name)}`;
+        };
+        img.src = sheikh.image;
+    });
 }
 
 // Render sheikhs to the page
 function renderSheikhs(filteredSheikhs = sheikhs) {
     sheikhsContainer.innerHTML = '';
+    
+    // Show loading state
+    if (filteredSheikhs.length === 0) {
+        sheikhsContainer.innerHTML = `
+            <div class="no-results">
+                <i class="fas fa-search"></i>
+                <h3>لم يتم العثور على شيوخ</h3>
+                <p>جرب بحثًا مختلفًا أو اختر فلترًا آخر</p>
+            </div>
+        `;
+        return;
+    }
     
     filteredSheikhs.forEach(sheikh => {
         const isEgyptian = sheikh.type === 'egyptian';
@@ -336,7 +381,10 @@ function renderSheikhs(filteredSheikhs = sheikhs) {
                 </div>
             </div>
             <div class="sheikh-info">
-                <span class="sheikh-country">${sheikh.country}</span>
+                <span class="sheikh-country">
+                    <i class="fas fa-map-marker-alt" style="margin-left: 5px;"></i>
+                    ${sheikh.country}
+                </span>
                 <p class="sheikh-description">${sheikh.description}</p>
                 <div class="recitations-count">
                     <i class="fas fa-play-circle"></i>
@@ -407,14 +455,15 @@ function playSheikh(sheikhId) {
     if (!sheikh) return;
     
     currentSheikh = sheikh;
+    currentSuraIndex = 0;
     
-    // Set audio source (using a placeholder URL for demonstration)
-    audio.src = `https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3`;
+    // Set audio source (demo URL)
+    audio.src = `https://download.quranicaudio.com/quranaudio/001.mp3`;
     
     // Update player UI
     document.getElementById('playerSheikhImg').src = sheikh.image;
     document.getElementById('playerTitle').textContent = `استماع إلى ${sheikh.name}`;
-    document.getElementById('playerSubtitle').textContent = 'سورة الفاتحة';
+    document.getElementById('playerSubtitle').textContent = 'سورة الفاتحة - تجويد';
     
     // Show player
     audioPlayer.style.display = 'block';
@@ -425,9 +474,15 @@ function playSheikh(sheikhId) {
 
 // Play audio
 function playAudio() {
-    audio.play();
-    isPlaying = true;
-    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    audio.play()
+        .then(() => {
+            isPlaying = true;
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        })
+        .catch(error => {
+            console.error('خطأ في تشغيل الصوت:', error);
+            showNotification('⚠️ تعذر تشغيل الصوت، جرب سورة أخرى', 'warning');
+        });
 }
 
 // Pause audio
@@ -476,15 +531,29 @@ function downloadSura(sheikhId, suraNumber) {
     
     if (!sheikh || !sura) return;
     
-    // In a real application, this would link to an actual audio file
-    // For this demo, we'll simulate a download with an alert
-    alert(`سيبدأ تنزيل سورة ${sura.name} بصوت ${sheikh.name}\n\nفي التطبيق الحقيقي، هذا الزر سيحمل الملف الفعلي.`);
+    // Create realistic download URL
+    const sheikhNameFormatted = sheikh.name
+        .replace(/الشيخ /g, '')
+        .replace(/\s+/g, '_')
+        .toLowerCase();
     
-    // Simulate download
+    // Demo download URL
+    const downloadUrl = `https://download.quranicaudio.com/quran/${sheikhNameFormatted}/${String(suraNumber).padStart(3, '0')}.mp3`;
+    
+    // Create download link
     const link = document.createElement('a');
-    link.href = '#';
-    link.download = `${sheikh.name.replace(/\s+/g, '_')}_${sura.name}.mp3`;
-    link.click();
+    link.href = downloadUrl;
+    link.download = `${sheikh.name}_سورة_${sura.name}.mp3`;
+    link.target = '_blank';
+    
+    // Show download status
+    showNotification(`جاري تنزيل سورة ${sura.name} بصوت ${sheikh.name}...`, 'info');
+    
+    // Start download
+    setTimeout(() => {
+        link.click();
+        showNotification(`✅ تم بدء تنزيل سورة ${sura.name}`, 'success');
+    }, 500);
 }
 
 // Play sura function
@@ -497,8 +566,14 @@ function playSura(sheikhId, suraNumber) {
     currentSheikh = sheikh;
     currentSuraIndex = suraNumber - 1;
     
-    // Set audio source
-    audio.src = `https://www.soundhelix.com/examples/mp3/SoundHelix-Song-${suraNumber}.mp3`;
+    // Create realistic audio URL
+    const sheikhNameFormatted = sheikh.name
+        .replace(/الشيخ /g, '')
+        .replace(/\s+/g, '_')
+        .toLowerCase();
+    
+    // Demo audio URL
+    audio.src = `https://download.quranicaudio.com/quran/${sheikhNameFormatted}/${String(suraNumber).padStart(3, '0')}.mp3`;
     
     // Update player UI
     document.getElementById('playerSheikhImg').src = sheikh.image;
@@ -515,7 +590,45 @@ function playSura(sheikhId, suraNumber) {
     downloadModal.style.display = 'none';
 }
 
-// Setup event listeners
+// Show notification
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = 'download-status';
+    
+    let icon = 'fa-info-circle';
+    if (type === 'success') icon = 'fa-check-circle';
+    if (type === 'warning') icon = 'fa-exclamation-triangle';
+    if (type === 'error') icon = 'fa-times-circle';
+    
+    notification.innerHTML = `
+        <i class="fas ${icon}" style="font-size: 1.2rem;"></i>
+        <span>${message}</span>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// ============================================
+// Helper Functions
+// ============================================
+
+// Format time (seconds to mm:ss)
+function formatTime(seconds) {
+    if (isNaN(seconds) || seconds === 0) return '0:00';
+    
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+// ============================================
+// Event Listeners Setup
+// ============================================
 function setupEventListeners() {
     // Play/Pause button
     playBtn.addEventListener('click', () => {
@@ -598,7 +711,9 @@ function setupEventListeners() {
         
         // Update time display
         currentTimeEl.textContent = formatTime(currentTime);
-        durationEl.textContent = formatTime(duration);
+        if (duration && !isNaN(duration)) {
+            durationEl.textContent = formatTime(duration);
+        }
     });
     
     // Audio ended
@@ -622,18 +737,58 @@ function setupEventListeners() {
         const clickX = e.offsetX;
         const duration = audio.duration;
         
-        audio.currentTime = (clickX / width) * duration;
+        if (duration && !isNaN(duration)) {
+            audio.currentTime = (clickX / width) * duration;
+        }
+    });
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+        // Space bar to play/pause
+        if (e.code === 'Space' && audioPlayer.style.display !== 'none') {
+            e.preventDefault();
+            if (isPlaying) {
+                pauseAudio();
+            } else {
+                playAudio();
+            }
+        }
+        
+        // Escape to close modals
+        if (e.code === 'Escape') {
+            if (downloadModal.style.display === 'flex') {
+                downloadModal.style.display = 'none';
+            }
+            if (audioPlayer.style.display !== 'none') {
+                audioPlayer.style.display = 'none';
+                pauseAudio();
+            }
+        }
+    });
+    
+    // Prevent right-click on images
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.classList.contains('sheikh-img') || 
+            e.target.classList.contains('player-sheikh-img')) {
+            e.preventDefault();
+            showNotification('🕌 هذه الصورة محمية بحقوق النشر', 'warning');
+        }
     });
 }
 
-// Format time (seconds to mm:ss)
-function formatTime(seconds) {
-    if (isNaN(seconds)) return '0:00';
-    
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-}
+// ============================================
+// Make functions available globally
+// ============================================
+window.downloadSura = downloadSura;
+window.playSura = playSura;
 
-// Initialize the app when page loads
+// ============================================
+// Initialize the application
+// ============================================
 document.addEventListener('DOMContentLoaded', init);
+
+// Log initialization
+console.log('🚀 تطبيق تلاوات القرآن الكريم جاهز!');
+console.log(`📊 عدد الشيوخ: ${sheikhs.length}`);
+console.log(`📊 عدد السور: ${suras.length}`);
+console.log('👨‍💻 تم التطوير بواسطة Moaz Yasser');
